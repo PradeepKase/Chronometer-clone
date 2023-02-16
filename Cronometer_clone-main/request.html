@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometer</title>
+    <link rel="icon" href="./assets/crono-icon-main-nav.svg">
+    <link rel="stylesheet" href="./styles/request.css">
+    <script src="https://kit.fontawesome.com/c0adbb8084.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Support Navbar Start -->
+    <nav id="navbar">
+        <a href="/">
+            <img src="https://theme.zdassets.com/theme_assets/197219/111fe6921e8b22116b39eaa745ea08e38a718e0d.png"
+                alt="Logo">
+        </a>
+        <a href="./request.html">Submit a request</a>
+    </nav>
+    <!-- Support Navbar End -->
+
+
+    <!-- Search Start -->
+    <section class="container search-box">
+        <p><a href="./support.html">Cronometer</a> > Submit a request</p>
+        <form class="searchbar" onsubmit="Search(event)">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="query" placeholder="Search">
+        </form>
+    </section>
+    <!-- Search End -->
+
+
+    <!-- Form Start -->
+    <section class="container form">
+        <h1 class="title">Submit a request</h1>
+        <form id="request_form" onsubmit="SubmitRequest(event)">
+            <label for="email">Your email address<span>*</span></label>
+            <input type="email" id="email" required>
+
+            <label for="subject">Subject<span>*</span></label>
+            <input type="text" id="subject" required>
+
+            <label for="desc">Description<span>*</span></label>
+            <textarea id="desc" required></textarea>
+            <p>Please enter the details of your request. A member of our support staff will respond as soon as possible.
+            </p>
+
+            <label for="attachment">Attachments</label>
+            <input type="file" id="attachment">
+
+            <input type="submit">
+        </form>
+    </section>
+    <!-- Form End -->
+
+
+    <!-- Footer Start -->
+    <section class="container footer">
+        <a href="./index.html">Cronometer</a>
+        <a href="#" id="powered_by">Powered by Team MJRDM</a>
+    </section>
+    <!-- Footer End -->
+
+
+    <!-- Floating Buttons Start -->
+    <div id="floating_support" onclick="RequestOpen()">
+        <i class="fa-regular fa-circle-question"></i>
+        <h3>Support</h3>
+    </div>
+    <!-- Floating Buttons End -->
+
+    <script src="./scripts/request.js"></script>
+</body>
+
+</html>
